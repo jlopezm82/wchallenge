@@ -71,3 +71,6 @@ gem 'oj', '~> 3.7.9'
 # Style application
 gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails', '~> 4.3.3'
+
+gem 'will_paginate', '~> 3.1.0'
+gem 'will_paginate-bootstrap4', '~> 0.2.2'

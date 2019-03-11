@@ -7,6 +7,8 @@ class ApplicationController < ActionController::Base
   POSTS_PATH = '/posts'.freeze
   COMMENTS_PATH = '/comments'.freeze
 
+  require 'will_paginate/array'
+
   def get_patron_session
     patron_session = Patron::Session.new
     patron_session.base_url = API_ENDPOINT
