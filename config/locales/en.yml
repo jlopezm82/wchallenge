@@ -31,3 +31,46 @@
 
 en:
   hello: "Hello world"
+  show: 'Show'
+  common:
+    navbar:
+      albums: 'Albums'
+      brand: 'Wchallenge'
+      home: 'Home'
+      photos: 'Photos'
+      posts: 'Posts'
+      users: 'Users'
+  api:
+    v1:
+      albums:
+        index:
+          id: 'Id'
+          photos: 'Photos'
+          title: 'Title'
+          title_page: 'Albums'
+          user: 'User'
+        show:
+          title: 'Album photos'
+      photos:
+        index:
+          title: 'Photos'
+      posts:
+        index:
+          id: 'Id'
+          options: 'Options'
+          title: 'Title'
+          title_page: 'Posts'
+          user: 'User'
+        show:
+          btn_clear_filter: 'Clear filtera'
+          btn_filter: 'Filter'
+          message_filter: 'Filter comments by name'
+      users:
+        index:
+          albums: 'Albums'
+          email: 'Email'
+          name: 'Name'
+          phone: 'Phone'
+          title: 'Users'
+          username: 'Username'
+          website: 'Website'
