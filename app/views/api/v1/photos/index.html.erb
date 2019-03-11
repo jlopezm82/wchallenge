@@ -2,14 +2,4 @@
 
 <hr class="mt-2 mb-5">
 
-<div class="row text-center">
-  <% @photos.each do |photo| %>
-    <div class="col-lg-3 col-md-4 col-6">
-      <%= link_to photo["url"], class: 'd-block mb-4 h-100', target: '_blank' do %>
-        <%= image_tag photo["thumbnailUrl"], class: 'img-fluid img-thumbnail', alt: photo["title"] %>
-      <% end %>
-    </div>
-  <% end %>
-</div>
-
-<%= will_paginate @photos, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
+<%= render 'common/photos', obj: @photos %>
