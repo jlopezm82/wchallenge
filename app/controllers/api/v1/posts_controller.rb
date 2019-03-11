@@ -4,7 +4,8 @@ class Api::V1::PostsController < ApplicationController
     service_response = get_patron_session.get(POSTS_PATH)
 
     if service_response.status < 400
-      @posts = Oj.load(service_response.body)
+      posts = Oj.load(service_response.body)
+      @posts = posts.to_a.paginate(:page => params[:page], :per_page => 10)
     end
 
     render 'index'
