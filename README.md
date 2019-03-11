@@ -7,3 +7,6 @@ Application to show users, albums, photos, posts and comments from a external se
 
 * Rails version
   Rails '5.2.2'
+
+* Bundle version
+  2.0.1
