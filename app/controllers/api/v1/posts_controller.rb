@@ -1,14 +1,7 @@
 class Api::V1::PostsController < ApplicationController
 
-  API_ENDPOINT = 'https://jsonplaceholder.typicode.com'.freeze
-  POSTS_PATH = '/posts'.freeze
-  COMMENTS_PATH = '/comments'.freeze
-
   def index
-    patron_session = Patron::Session.new
-    patron_session.base_url = API_ENDPOINT
-
-    service_response = patron_session.get(POSTS_PATH)
+    service_response = get_patron_session.get(POSTS_PATH)
 
     if service_response.status < 400
       @posts = Oj.load(service_response.body)
@@ -18,9 +11,7 @@ class Api::V1::PostsController < ApplicationController
   end
 
   def show
-    patron_session = Patron::Session.new
-    patron_session.base_url = API_ENDPOINT
-
+    patron_session = get_patron_session
     service_response = patron_session.get("#{POSTS_PATH}/#{params["id"]}")
 
     if service_response.status < 400
